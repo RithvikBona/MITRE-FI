@@ -3,8 +3,11 @@ A NiFi flow for data preprocessing, routing for data analysis, and uploading met
 
 Written by: `Rithvik Bonagiri and Advik Sachdeva`
 
+## Purpose
+This flow is used for an internal malware detection tool for MITRE as a part of the UMD App Development Club MITRE Team. The flow does data pre-processing and routing of potential malware files to analyzers and stores results in an elasticsearch database using REST API calls from NiFi processers.
+
 ## NiFi
-This flow takes in a file (sent by the flask website), does data-preprocessing such as identifying the MIME type and updating the filename, sends all files to Exiftool, and then routes only the executables to Ghidra for analysis. The flow then recieves files from both endpoints, converts them to JSON, and sends them to different ElasticSearch indices
+This flow takes in a file (sent by a flask website), does data pre-processing such as identifying the MIME type and updating the filename, sends all files to Exiftool, and then routes only the executables to Ghidra for analysis. The flow then recieves files from both endpoints, converts them to JSON, and sends them to different ElasticSearch indices
 
 ## Installation
 ### Nifi Installation
